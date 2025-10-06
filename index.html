@@ -1,12 +1,132 @@
 <!doctype html>
-<meta charset="utf-8">
+<meta charset="utf-8" />
 <title>Juvan Rivera — Projects</title>
-<style>body{font:16px system-ui;margin:40px;max-width:720px}a{color:#0366d6}</style>
-<h1>Juvan Rivera</h1>
-<p>Portfolio in progress — meanwhile, see my GitHub and a few projects:</p>
-<ul>
-  <li><a href="https://github.com/juvanrivera/Snake-Game">Snake Game</a></li>
-  <li><a href="https://github.com/juvanrivera/supercell-invaders">Supercell Invaders</a></li>
-  <li><a href="https://github.com/juvanrivera/Minecraft">Minecraft (course project)</a></li>
-</ul>
-<p>More: <a href="https://github.com/juvanrivera">github.com/juvanrivera</a></p>
+
+<style>
+  :root{
+    --ink:#0f172a;        /* text */
+    --muted:#475569;      /* secondary text */
+    --ring:#a78bfa;       /* accent 1 */
+    --ring2:#22d3ee;      /* accent 2 */
+    --bg:#0b1020;         /* page bg */
+    --card:#0f1222cc;     /* card glass */
+    --stroke:#1e293b80;   /* borders */
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; font:16px/1.5 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto;
+    color:#e5e7eb; background:
+      radial-gradient(1200px 600px at 80% -20%, #1f2937 0%, transparent 60%),
+      radial-gradient(900px 500px at -10% 10%, #0ea5e9 0%, transparent 55%),
+      linear-gradient(180deg, #020617 0%, #0b1020 60%, #0b1020 100%);
+    display:flex; align-items:flex-start; justify-content:center; padding:56px 20px;
+  }
+  .wrap{width:min(980px,100%)}
+  header{display:flex; align-items:center; gap:14px; margin-bottom:18px}
+  header img{width:42px; height:42px; border-radius:50%; border:1px solid #ffffff22}
+  h1{margin:0; font-size:28px; letter-spacing:.2px}
+  .subtitle{margin:4px 0 0; color:#cbd5e1; font-size:14px}
+
+  /* Featured project */
+  .featured{
+    position:relative; overflow:hidden; border-radius:16px; padding:22px 22px 18px;
+    background:
+      linear-gradient(135deg, #111827aa, #0b1227aa 40%),
+      radial-gradient(120% 120% at 90% -10%, #22d3ee30 0%, transparent 50%),
+      radial-gradient(120% 120% at -10% 110%, #a78bfa30 0%, transparent 50%);
+    border:1px solid #ffffff1a;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 10px 40px #00000055;
+  }
+  .chip{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px;
+    background:#0b1227; border:1px solid #33415580; color:#cbd5e1; font-size:12px; margin-bottom:10px}
+  .grad{
+    background: linear-gradient(90deg, var(--ring), var(--ring2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700
+  }
+  .featured h2{margin:6px 0 6px; font-size:22px}
+  .meta{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0 14px}
+  .badge{border:1px solid #2a364a; background:#121a30; color:#cbd5e1; padding:4px 8px; border-radius:8px; font-size:12px}
+
+  .actions{display:flex; gap:10px; flex-wrap:wrap}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px;
+    color:#0b1020; background:linear-gradient(90deg, var(--ring), var(--ring2));
+    font-weight:700; text-decoration:none; border:0; box-shadow:0 6px 24px #00000066;
+  }
+  .btn.ghost{background:#0b1227; color:#e5e7eb; border:1px solid #334155}
+  .desc{color:#cbd5e1; margin:8px 0 16px}
+
+  /* Grid for other projects */
+  .grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+    gap:14px; margin-top:16px}
+  .card{
+    background:var(--card); border:1px solid #ffffff14; padding:16px; border-radius:14px;
+    transition:transform .18s ease, box-shadow .18s ease; text-decoration:none; color:inherit
+  }
+  .card:hover{transform:translateY(-3px); box-shadow:0 10px 28px #00000066}
+  .card h3{margin:0 0 6px; color:#e5e7eb; font-size:18px}
+  .card p{margin:0; color:#cbd5e1; font-size:14px}
+  .foot{margin-top:16px; display:flex; gap:10px; flex-wrap:wrap}
+  .foot a{color:#93c5fd}
+</style>
+
+<div class="wrap">
+  <header>
+    <img alt="avatar" src="https://avatars.githubusercontent.com/u/000000?v=4"
+         onerror="this.style.display='none'">
+    <div>
+      <h1>Juvan Rivera</h1>
+      <p class="subtitle">ECE undergrad @ UPR–Mayagüez · projects & experiments</p>
+    </div>
+  </header>
+
+  <!-- Featured: Police Report Project -->
+  <section class="featured">
+    <span class="chip">🔥 Featured</span>
+    <h2><span class="grad">Police Report Project</span></h2>
+    <p class="desc">
+      “Cracking the Time Code”—a Java data-structures project that loads criminal organizations,
+      deciphers a flyer (digital-root), arrests the leader and underlings, and writes a tree/report.
+      Built with custom lists (no <code>java.util</code>), DFS traversals, and simple file I/O.
+    </p>
+    <div class="meta">
+      <span class="badge">Java</span>
+      <span class="badge">Data Structures</span>
+      <span class="badge">DFS</span>
+      <span class="badge">File I/O</span>
+    </div>
+    <div class="actions">
+      <a class="btn" href="https://github.com/juvanrivera/Police-Report-Project" target="_blank" rel="noopener">
+        View Repository →
+      </a>
+      <a class="btn ghost" href="https://github.com/juvanrivera/Police-Report-Project/tree/master/results" target="_blank" rel="noopener">
+        Sample Outputs
+      </a>
+      <a class="btn ghost" href="https://github.com/juvanrivera/Police-Report-Project/blob/master/README.md" target="_blank" rel="noopener">
+        README
+      </a>
+    </div>
+  </section>
+
+  <!-- Other repos -->
+  <section class="grid">
+    <a class="card" href="https://github.com/juvanrivera/Snake-Game" target="_blank" rel="noopener">
+      <h3>Snake Game</h3>
+      <p>OpenFrameworks game with power-ups, states, and collision logic. <br/><small>C++ • openFrameworks</small></p>
+    </a>
+    <a class="card" href="https://github.com/juvanrivera/supercell-invaders" target="_blank" rel="noopener">
+      <h3>Supercell Invaders</h3>
+      <p>Arcade shooter with enemy waves and boss behaviors. <br/><small>C++ • openFrameworks</small></p>
+    </a>
+    <a class="card" href="https://github.com/juvanrivera/Minecraft" target="_blank" rel="noopener">
+      <h3>Minecraft (course)</h3>
+      <p>Course project exploring DS & rendering basics. <br/><small>Java</small></p>
+    </a>
+  </section>
+
+  <div class="foot">
+    <a href="https://github.com/juvanrivera" target="_blank" rel="noopener">More on GitHub ↗</a>
+  </div>
+</div>
